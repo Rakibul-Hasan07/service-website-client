@@ -30,11 +30,15 @@ const MyReview = () => {
 
     }
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-10'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-5 my-10'>
             {
                 reviews.map(review =>
-                    <div className="card w-96 bg-base-100 shadow-xl">
+                    <div className="card bg-base-100 shadow-xl">
                         <div className="card-body">
+                            <div className='flex justify-center items-center'>
+                                <p className='text-4xl font-bold'>{review.name}</p>
+                                <img className='rounded-full w-[100px] h-[100px]' src={review.image} alt="" />
+                            </div>
                             <p>{review.message}</p>
                             <div className="card-actions justify-end">
                                 <button className="btn btn-outline">Update</button>

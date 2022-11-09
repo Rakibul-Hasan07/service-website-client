@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Register = () => {
-    const {createUser} = useContext(AuthContext)
+    const {createUser, updateUser} = useContext(AuthContext)
     const [userInfo, setUserInfo] = useState({});
 
     const handleRegister = (event) => {
@@ -11,11 +11,10 @@ const Register = () => {
         createUser(userInfo.email, userInfo.password)
         .then(result => {
             const user = result.user;
-            const procced = window.confirm('Register Successfully');
-            console.log(procced);
-            if(procced){
-                event.target.reset();
-            }
+            console.log(user);
+            updateUser(userInfo.name, userInfo.url)
+            .then(()=>{})
+            .catch(err => console.log(err))
         })
         .catch(err => console.log(err))
     }
@@ -41,6 +40,12 @@ const Register = () => {
                                     <span className="label-text">Name</span>
                                 </label>
                                 <input onChange={handleInput} type="text" name='name' placeholder="name" className="input input-bordered" />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Image</span>
+                                </label>
+                                <input onChange={handleInput} type="url" name='url' placeholder="image-url" className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">

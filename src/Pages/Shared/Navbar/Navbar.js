@@ -22,6 +22,7 @@ const Navbar = () => {
                         user?.uid ? <><li><Link to='/myreview'>My Review</Link></li>
                             <li><Link to='/addservice'>Add Service</Link></li></> : ' '
                     }
+                    <Link to='/blogs'>Blogs</Link>
                 </ul>
             </div>
             <div className="navbar-end">

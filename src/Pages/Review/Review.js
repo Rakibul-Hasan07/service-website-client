@@ -19,7 +19,9 @@ const Review = () => {
             serviceName: service_name,
             price,
             email,
-            message
+            message,
+            image: user?.photoURL,
+            name: user?.displayName
         }
 
 
@@ -34,7 +36,7 @@ const Review = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged) {
-                    alert('Order placed successfully')
+                    alert('Review Added successfully')
                     form.reset();
 
                 }
