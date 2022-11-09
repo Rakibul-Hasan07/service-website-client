@@ -19,8 +19,8 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                     {
-                        user?.uid ? <><li><Link>My Review</Link></li>
-                            <li><Link>Add Service</Link></li></> : ' '
+                        user?.uid ? <><li><Link to='/myreview'>My Review</Link></li>
+                            <li><Link to='/addservice'>Add Service</Link></li></> : ' '
                     }
                 </ul>
             </div>

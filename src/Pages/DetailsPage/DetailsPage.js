@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 
@@ -22,6 +22,9 @@ const DetailsPage = () => {
                         <p>Rating: {rating}</p>
                     </div>
                     <p>{description}</p>
+                </div>
+                <div className='flex justify-center my-6'>
+                    <Link to={`/review/${_id}`}><button className='btn btn-outline'>Review</button></Link>
                 </div>
             </div>
         </div>
