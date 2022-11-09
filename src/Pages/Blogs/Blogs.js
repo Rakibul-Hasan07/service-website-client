@@ -1,25 +1,20 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const Blogs = () => {
+    const blogs = useLoaderData();
+    // console.log(blogs);
     return (
         <div>
-            <h1>this is blog pagee</h1>
-            <div>
-                <h1>Difference between SQL and NoSQL</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quia quo dolorum quisquam libero explicabo repellendus repellat repudiandae? Nostrum blanditiis explicabo debitis vel pariatur nam expedita magnam quaerat dolorem animi.</p>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-10 my-10'>
+                {
+                    blogs.map(blog => <div className='border p-6 rounded-md shadow-lg' key={blog._id}>
+                        <h1 className='font-bold text-2xl my-3'>{blog.question}</h1>
+                        <p>{blog.answer}</p>
+                    </div>)
+                }
             </div>
-            <div>
-                <h1>What is JWT, and how does it work?</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium vero, eaque nemo consequatur, modi consectetur impedit cupiditate quibusdam dolor dolores ea. Maiores veniam voluptas ipsum magnam placeat illo. Vero, explicabo.</p>
-            </div>
-            <div>
-                <p>What is the difference between javascript and NodeJS?</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis dolores nihil soluta? Esse consequatur quos ea cumque iusto ipsam dolor vitae harum, dolorem distinctio impedit minus, cupiditate, facere dicta? Corporis?</p>
-            </div>
-            <div>
-                <h1>How does NodeJS handle multiple requests at the same time?</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore ipsa dicta minima officia harum voluptatibus dignissimos reprehenderit cum sapiente saepe, culpa vitae iste laborum et aut, quaerat sint corrupti officiis.</p>
-            </div>
+            
         </div>
     );
 };
