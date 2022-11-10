@@ -11,7 +11,7 @@ const BestPhoto = () => {
     return (
         <div>
             <h1 className='text-center font-bold text-3xl'>This is my best photo</h1>
-            <div className='flex justify-evenly'>
+            <div className='md:flex flex-row justify-evenly'>
                 {
                     photo.map(ph => <div key={ph._id}>
                         <div className="card card-compact lg:w-96 lg:h-96 my-10 bg-base-100 shadow-xl">
