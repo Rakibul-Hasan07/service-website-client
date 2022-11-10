@@ -5,7 +5,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
     const handleLogout = () => {
         logOut()
             .then(() => { })
@@ -22,8 +22,8 @@ const Navbar = () => {
 
             </div>
             <div className={`navbar shadow-xl px-5`}>
-                <div className={`navbar flex flex-col md:flex-row justify-between w-full ${open ? 'hidden' : 'block'}`}>
-                    <div className="text-center">
+                <div className={`navbar flex flex-col md:flex-row w-full ${open ? 'hidden' : 'block'}`}>
+                    <div className="navbar-start text-center">
                         <Link to='/' className="btn btn-ghost normal-case text-2xl">Peak Photography</Link>
                     </div>
                     <div className="">

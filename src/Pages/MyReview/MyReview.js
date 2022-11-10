@@ -5,7 +5,6 @@ const MyReview = () => {
     const { user } = useContext(AuthContext)
     const [reviews, setReviews] = useState([]);
 
-    console.log(reviews);
     useEffect(() => {
         fetch(`http://localhost:5000/review?email=${user?.email}`)
             .then(res => res.json())
@@ -33,7 +32,7 @@ const MyReview = () => {
         <div className='grid grid-cols-1 md:grid-cols-2 gap-5 my-10'>
             {
                 reviews.map(review =>
-                    <div className="card bg-base-100 shadow-xl">
+                    <div key={review._id} className="card bg-base-100 shadow-xl">
                         <div className="card-body">
                             <div className='flex justify-center items-center'>
                                 <p className='text-4xl font-bold'>{review.name}</p>
