@@ -37,14 +37,19 @@ const AddService = () => {
 
     return (
         <div>
-            <form onSubmit={handleAddService}>
+            <form className='lg:w-[500px] mx-auto' onSubmit={handleAddService}>
                 <h2 className="text-4xl text-center my-10">Add Your New Service</h2>
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+                <div className='grid grid-cols-1 gap-4'>
+                    <label htmlFor="">Service Name</label>
                     <input name="service" type="text" placeholder="serviceName" className="input input-ghost w-full  input-bordered" required />
+                    <label htmlFor="">Price</label>
                     <input name="price" type="text" placeholder="price" className="input input-ghost w-full  input-bordered" required />
+                    <label htmlFor="">Image URL</label>
                     <input name="url" type="text" placeholder="image-url" className="input input-ghost w-full  input-bordered" required />
+                    <label htmlFor="">Write Something About This</label>
+                    <textarea name="description" className="textarea textarea-bordered h-24 w-full my-6" placeholder="description" required></textarea>
                 </div>
-                <textarea name="description" className="textarea textarea-bordered h-24 w-full my-6" placeholder="description" required></textarea>
+
                 <div className='text-center mb-5'>
                     <input className='btn btn-outline' type="submit" value="Submit Your Service" />
                 </div>
