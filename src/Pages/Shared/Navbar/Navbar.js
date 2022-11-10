@@ -23,7 +23,7 @@ const Navbar = () => {
             </div>
             <div className={`navbar shadow-xl px-5`}>
                 <div className={`navbar flex flex-col md:flex-row justify-between w-full ${open ? 'hidden' : 'block'}`}>
-                    <div className="navbar-start">
+                    <div className="text-center">
                         <Link to='/' className="btn btn-ghost normal-case text-2xl">Peak Photography</Link>
                     </div>
                     <div className="">
@@ -35,7 +35,7 @@ const Navbar = () => {
                             <Link to='/blogs'>Blogs</Link>
                         </ul>
                     </div>
-                    <div className="navbar-end font-bold gap-4">
+                    <div className="navbar-end font-bold flex flex-col md:flex-row gap-4">
                         {
                             user?.uid ? <Link onClick={handleLogout}> LogOut</Link> : <><Link to='/login' className="">Login</Link>
                                 <Link to='/register' className="">Register</Link></>
