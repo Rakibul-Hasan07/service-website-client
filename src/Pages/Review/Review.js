@@ -52,9 +52,7 @@ const Review = () => {
                 <h2 className="text-4xl text-center">Service Name: {service_name}</h2>
                 <h4 className="text-3xl text-center my-4">Price: {price}</h4>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-                    <input name="firstName" type="text" placeholder="First Name" className="input input-ghost w-full  input-bordered" />
-                    <input name="lastName" type="text" placeholder="Last Name" className="input input-ghost w-full  input-bordered" />
-                    <input name="rating" type="text" placeholder="Rating" className="input input-ghost w-full  input-bordered" />
+                    <input name="name" type="text" placeholder="Your Name" defaultValue={user?.displayName} className="input input-ghost w-full  input-bordered" />
                     <input name="email" type="text" placeholder="Your email" defaultValue={user?.email} className="input input-ghost w-full  input-bordered" readOnly />
                 </div>
                 <textarea name="message" className="textarea textarea-bordered h-24 w-full my-3" placeholder="Your Message" required></textarea>
