@@ -6,14 +6,12 @@ const AddService = () => {
         event.preventDefault();
         const form = event.target;
         const service_name = form.service.value;
-        const rating = form.rating.value;
         const price = form.price.value;
         const url = form.url.value;
         const description = form.description.value;
 
         const serviceData = {
             service_name: service_name,
-            rating: rating,
             price: price,
             image_url: url,
             description: description
@@ -43,7 +41,6 @@ const AddService = () => {
                 <h2 className="text-4xl text-center my-10">Add Your New Service</h2>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
                     <input name="service" type="text" placeholder="serviceName" className="input input-ghost w-full  input-bordered" required />
-                    <input name="rating" type="text" placeholder="rating" className="input input-ghost w-full  input-bordered" required />
                     <input name="price" type="text" placeholder="price" className="input input-ghost w-full  input-bordered" required />
                     <input name="url" type="text" placeholder="image-url" className="input input-ghost w-full  input-bordered" required />
                 </div>

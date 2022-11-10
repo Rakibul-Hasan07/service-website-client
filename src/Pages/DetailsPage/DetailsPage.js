@@ -5,7 +5,7 @@ import 'react-photo-view/dist/react-photo-view.css';
 
 const DetailsPage = () => {
     const serviceDetails = useLoaderData();
-    const { _id, service_name, rating, price, image_url, description } = serviceDetails;
+    const { _id, service_name, price, image_url, description } = serviceDetails;
     console.log(serviceDetails);
     return (
         <div className='flex justify-center my-10'>
@@ -17,9 +17,8 @@ const DetailsPage = () => {
                 </PhotoProvider>
                 <div className="card-body">
                     <h2 className="card-title">{service_name}</h2>
-                    <div className='flex justify-evenly'>
+                    <div>
                         <p>Price: ${price}</p>
-                        <p>Rating: {rating}</p>
                     </div>
                     <p>{description}</p>
                 </div>
