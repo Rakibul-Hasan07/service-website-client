@@ -1,3 +1,9 @@
+* Login and LogOut feature
+* Show Review feature
+* Send Review feature
+* Add new service feature
+* Blogs section
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
