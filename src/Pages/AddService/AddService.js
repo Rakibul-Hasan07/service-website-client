@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import useTitle from '../../useTitle/useTitle';
 
 const AddService = () => {
-    // const [addService, setAddService] = useState({});
+    useTitle('AddService')
     const handleAddService = (event) => {
         event.preventDefault();
         const form = event.target;

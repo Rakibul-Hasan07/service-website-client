@@ -1,10 +1,11 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import useTitle from '../../useTitle/useTitle';
 
 const Register = () => {
     const {createUser, updateUser} = useContext(AuthContext)
     const [userInfo, setUserInfo] = useState({});
-
+    useTitle('Register')
     const handleRegister = (event) => {
         event.preventDefault();
         // console.log(userInfo);

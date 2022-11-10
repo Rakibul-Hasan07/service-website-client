@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import useTitle from '../../useTitle/useTitle';
 
 const Login = () => {
     const { login, googleLogin } = useContext(AuthContext)
@@ -8,7 +9,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
-
+    useTitle('Login')
     const handleLogin = (event) => {
         event.preventDefault();
         // console.log(userInfo);

@@ -2,8 +2,10 @@ import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+import useTitle from '../../useTitle/useTitle';
 
 const DetailsPage = () => {
+    useTitle('Details')
     const serviceDetails = useLoaderData();
     const { _id, service_name, price, image_url, description } = serviceDetails;
     console.log(serviceDetails);

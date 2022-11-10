@@ -1,9 +1,10 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../../useTitle/useTitle';
 
 const Blogs = () => {
     const blogs = useLoaderData();
-    // console.log(blogs);
+    useTitle('Blogs')
     return (
         <div>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-10 my-10'>
