@@ -43,7 +43,7 @@ const Navbar = () => {
                                 <div className="avatar">
                                     <div className="w-6 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                                         {
-                                            user?.photoURL ? <img src={user?.photoURL} /> : <img src="https://i.ibb.co/9cry6kN/download-3.jpg" />
+                                            user?.photoURL ? <img title={user?.displayName} src={user?.photoURL} /> : <img title={user?.displayName} src="https://i.ibb.co/9cry6kN/download-3.jpg" />
                                         }
                                     </div>
                                 </div>

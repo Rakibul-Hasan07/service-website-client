@@ -2,8 +2,7 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../../../../AuthProvider/AuthProvider';
 
 const Contact = () => {
-    const {user} = useContext(AuthContext)
-    console.log(user)
+    const { user } = useContext(AuthContext)
     return (
         <div className="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-4 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 dark:bg-gray-800 dark:text-gray-100">
             <div className="flex flex-col justify-between">
@@ -26,7 +25,7 @@ const Contact = () => {
                     <label for="message" className="text-sm">Message</label>
                     <textarea id="message" rows="3" className="w-full p-3  border-2 border-black rounded dark:bg-gray-800"></textarea>
                 </div>
-                <button type="submit" className="w-full p-3 btn btn-info text-sm font-bold tracki uppercase rounded dark:bg-violet-400 dark:text-gray-900">Send Message</button>
+                <button type="submit" className="w-full p-3 btn btn-info text-sm font-bold tracki uppercase rounded dark:bg-violet-400 dark:text-gray-900" disabled={!user?.uid}>Send Message</button>
             </form>
         </div>
     );
