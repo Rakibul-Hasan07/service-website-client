@@ -13,14 +13,14 @@ const Services = () => {
 
     return (
         <div>
-            <h1 className='text-center font-bold text-3xl my-4'>My Services</h1>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+            <h1 className='font-semibold text-2xl my-4'>My Services</h1>
+            <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5'>
                 {
                     services.map(service => <ServiceCart service={service} key={service._id}></ServiceCart>)
                 }
             </div>
             <div className='text-center my-8'>
-                <Link to='/services'><button className='btn btn-primary'>Show All</button></Link>
+                <Link to='/services'><button className='btn btn-primary btn-outline'>Show All</button></Link>
             </div>
         </div>
     );

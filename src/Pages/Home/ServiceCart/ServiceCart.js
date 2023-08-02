@@ -17,7 +17,7 @@ const ServiceCart = ({ service }) => {
                 <div className="card-body">
                     <h2 className="card-title">{service_name}</h2>
                     <div>
-                        <p>Price: ${price}</p>
+                        <p className='font-semibold'>Price: <span className='text-red-500'>${price}</span></p>
                     </div>
                     <p>{description.length > 100 ? description?.slice(0, 100) + '...' : description + '...'}</p>
                     <div className="card-actions justify-end">
